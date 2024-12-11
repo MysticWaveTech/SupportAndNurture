@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radionics Support Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f7fa;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: #4a90e2;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .input-group {
+            margin: 15px 0;
+        }
+        .input-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group textarea {
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #357abd;
+        }
+        .output {
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Radionics Support Program</h1>
+        <p>Use this tool to send nurturing and supportive energy to individuals persevering with special abilities.</p>
+
+        <div class="input-group">
+            <label for="focusIntent">Focus Intent:</label>
+            <textarea id="focusIntent" placeholder="Describe the nurturing and support you want to send..."></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="visualizeTarget">Visualize the Target Group (all people perserviering special abilities like teleportation, telekinesis, making physical matter, shapeshifting and Invincibility):</label>
+            <textarea id="visualizeTarget" placeholder="Describe the individuals you're sending support to..."></textarea>
+        </div>
+
+        <button class="button" onclick="sendSupport()">Send Support</button>
+
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        function sendSupport() {
+            const intent = document.getElementById('focusIntent').value;
+            const target = document.getElementById('visualizeTarget').value;
+
+            if (intent.trim() === '' || target.trim() === '') {
+                alert('Please fill in both the Focus Intent and Visualize Target fields.');
+                return;
+            }
+
+            const output = document.getElementById('output');
+            output.textContent = `Support and nurture have been sent to those persevering with special abilities. Your focused intent: "${intent}". Your visualization: "${target}".`;
+        }
+    </script>
+</body>
+</html>
